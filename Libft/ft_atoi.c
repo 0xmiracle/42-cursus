@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:35:50 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/08 19:35:38 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/08 19:36:23 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (ft_coneverttonumber(str, i, sign));
-	yhdhd
 }
 
 // int main()
