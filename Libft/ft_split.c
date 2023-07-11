@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:43 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/07 21:43:56 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/11 15:52:11 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ static int	ft_nostrings(char *s, char c)
 static void	ft_free(char **strings)
 
 {
-	int		i;
-
+	int i;
 	i = 0;
 	while (strings[i] != NULL)
 	{
@@ -51,7 +50,7 @@ static void	ft_free(char **strings)
 	free(strings);
 }
 
-static void	ft_splitandcopy(char const *s, char c, char **str, int count)
+static int	ft_splitandcopy(char const *s, char c, char **str, int count)
 {
 	int	j;
 	int	index;
@@ -70,18 +69,18 @@ static void	ft_splitandcopy(char const *s, char c, char **str, int count)
 		{
 			str[index] = (char *)malloc(sizeof(char) * (j + 1));
 			if (!str[index])
-				return (ft_free(str));
+				return (-1);
 			ft_strlcpy(str[index], &s[i], (j + 1));
 			i = i + j;
 		}
 		index++;
 	}
 	str[count] = NULL;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
 	int		count;
 	char	**strings;
 
@@ -89,28 +88,32 @@ char	**ft_split(char const *s, char c)
 	{
 		return (NULL);
 	}
-	i = 0;
 	count = ft_nostrings((char *)s, c);
 	strings = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!strings)
 		return (NULL);
-	ft_splitandcopy(s, c, strings, count);
+	// ft_splitandcopy(s, c, strings, count);
+	if (ft_splitandcopy(s, c, strings, count) == -1)
+	{
+		ft_free(strings);
+		return (NULL);
+	}
 	return (strings);
 }
 
-// int main()
+// int	main(void)
 // {
-//     char *str = "Nasser you pyssy";
-//     char c = ' ';
-//     int i;
-//     i = 0;
-//     int j;
-//     j = ft_nostrings(str, c);
-//     char **strings;
-//     strings = ft_split(str, c);
-//     while (i < j)
-//     {
-//         printf("%s\n", strings[i]);
-//         i++;
-//     }
+// 	char *str = "^^^1^^2a,^^^^3^^^^--h^^^^";
+// 	char c = '^';
+// 	int i;
+// 	i = 0;
+// 	int j;
+// 	j = ft_nostrings(str, c);
+// 	char **strings;
+// 	strings = ft_split(str, c);
+// 	while (i < j)
+// 	{
+// 		printf("%s\n", strings[i]);
+// 		i++;
+// 	}
 // }
