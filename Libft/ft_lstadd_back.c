@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:51:18 by ratwani           #+#    #+#             */
-/*   Updated: 2023/07/13 16:47:10 by ratwani          ###   ########.fr       */
+/*   Created: 2023/07/13 16:50:25 by ratwani           #+#    #+#             */
+/*   Updated: 2023/07/14 18:20:44 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*curr;
-	int		i;
 
-	curr = lst;
-	i = 0;
-	while (curr != NULL)
+	if (*lst == NULL)
 	{
-		curr = curr->next;
-		i++;
+		*lst = new;
 	}
-	return (i);
+	else
+	{
+		curr = *lst;
+		while (curr->next != NULL)
+		{
+			curr = curr->next;
+		}
+		curr->next = new;
+	}
 }
 
 // int main()
@@ -33,15 +37,21 @@ int	ft_lstsize(t_list *lst)
 //     t_list *Node2;
 //     t_list *Node3;
 //     t_list *Node4;
-//     // t_list *current;
+//     t_list *Node5;
 //     Node1 = ft_lstnew("1");
 //     Node2 = ft_lstnew("2");
 //     Node3 = ft_lstnew("3");
 //     Node4 = ft_lstnew("4");
+//     Node5 = ft_lstnew("5");
 //     Node1->next = Node2;
 //     Node2->next = Node3;
 //     Node3->next = Node4;
-//     Node4->next = NULL;
-//     // current = Node1;
-//     printf("%d", ft_lstsize(Node1));
+//     // Node4->next = NULL;
+//     ft_lstadd_back(&Node1, Node5);
+//     printf("LAST NODE ADDR:  %p\n\n", ft_lstlast(Node1));
+//     printf("%p\n", Node1);
+//     printf("%p\n", Node2);
+//     printf("%p\n", Node3);
+//     printf("%p\n", Node4);
+//     printf("%p\n", Node5);
 // }

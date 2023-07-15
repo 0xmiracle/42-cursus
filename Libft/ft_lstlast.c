@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:51:18 by ratwani           #+#    #+#             */
-/*   Updated: 2023/07/13 16:47:10 by ratwani          ###   ########.fr       */
+/*   Created: 2023/07/13 16:14:19 by ratwani           #+#    #+#             */
+/*   Updated: 2023/07/14 14:10:08 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*curr;
-	int		i;
 
+	if (lst == NULL)
+		return (NULL);
 	curr = lst;
-	i = 0;
-	while (curr != NULL)
+	while (curr->next)
 	{
 		curr = curr->next;
-		i++;
 	}
-	return (i);
+	return (curr);
 }
 
 // int main()
@@ -33,7 +32,6 @@ int	ft_lstsize(t_list *lst)
 //     t_list *Node2;
 //     t_list *Node3;
 //     t_list *Node4;
-//     // t_list *current;
 //     Node1 = ft_lstnew("1");
 //     Node2 = ft_lstnew("2");
 //     Node3 = ft_lstnew("3");
@@ -42,6 +40,6 @@ int	ft_lstsize(t_list *lst)
 //     Node2->next = Node3;
 //     Node3->next = Node4;
 //     Node4->next = NULL;
-//     // current = Node1;
-//     printf("%d", ft_lstsize(Node1));
+//     printf("%p\n", ft_lstlast(Node1));
+// 	printf("%p\n", Node4);
 // }
