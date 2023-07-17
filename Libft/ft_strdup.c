@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:38:02 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 19:38:19 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:44 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-
-// int main()
-// {
-//     char *c = "Hiiii";
-//     printf("%s", ft_strdup(c));
-// }

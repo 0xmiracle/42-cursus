@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:39:40 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:22:51 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:33:50 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-// int main()
-// {
-//     char a = 'Z';
-//     printf("%c", ft_toupper(a));
-// }

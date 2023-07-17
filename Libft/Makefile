@@ -52,8 +52,8 @@ OBJS_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJS_B)
-	ar -rcs $(NAME) $(OBJS) $(OBJS_B)
+$(NAME): $(OBJS) 
+	ar -rcs $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -64,8 +64,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-bonus: $(OBJS_B)
-	ar -rcs $(NAME) $(OBJS_B)
+bonus: $(OBJS) $(OBJS_B)
+	ar -rcs $(NAME) $(OBJS) $(OBJS_B)
 
 re: fclean all
 

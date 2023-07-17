@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:39:33 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 21:52:59 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:33:45 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-// int main()
-// {
-//     char a = 'P';
-//     printf("%c", ft_tolower(a));
-// }

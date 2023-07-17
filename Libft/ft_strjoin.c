@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:38:07 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/05 10:37:52 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:55 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
-// int main()
-// {
-//     char *c = "My name is";
-//     char *a = "Rami";
-//     printf("%s", ft_strjoin(c, a));
-// }

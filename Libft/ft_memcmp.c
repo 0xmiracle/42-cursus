@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:00 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/09 12:55:44 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:31:45 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (p1[i] - p2[i]);
 }
-
-// int	main(void)
-// {
-// 	// char c[] = "123456789";
-// 	// char a[] = "123459876";
-// 	// printf("%d\n", ft_memcmp(c, a, 5));
-// 	// printf("%d\n", memcmp(c, a, 5));
-// 	printf("%d\n",(ft_memcmp("teste", "teste", 0)));
-// 	printf("%d\n", (memcmp("teste", "teste", 0)));
-// }

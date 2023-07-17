@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:39:02 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/08 19:17:27 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:33:27 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char *haystack = NULL;
-//     char *needle = "by";
-//     printf("%s\n", ft_strnstr(haystack, needle, sizeof(char) * 18));
-//     printf("%s", strnstr(haystack, needle, sizeof(char) * 18));
-// }

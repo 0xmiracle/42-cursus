@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:36:11 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:20:52 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:13 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,3 @@ int	ft_isalnum(int a)
 	else
 		return (0);
 }
-
-// int main ()
-// {
-//     printf("%d\n", ft_isalnum('1'));
-//      printf("%d", isalnum('1'));
-// }

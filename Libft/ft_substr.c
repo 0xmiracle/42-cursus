@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:39:22 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/09 13:23:39 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:33:41 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	char *c = "";
-// 	printf("%s\n", ft_substr(c,1,1));
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:36:37 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:21:09 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:07 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isprint(int a)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_isprint('o'));
-// 	printf("%d", isprint('k'));
-// }

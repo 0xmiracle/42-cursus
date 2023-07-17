@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 13:28:42 by ratwani           #+#    #+#             */
-/*   Updated: 2023/07/08 16:34:08 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 13:50:08 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
-// int	main(void)
-// {
-// 	int a;
-// 	a = 16;
-// 	t_list *age = ft_lstnew(&a);
-// 	printf("%d", *(int*)age->content);
-// }

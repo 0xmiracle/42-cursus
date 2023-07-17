@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:39:13 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/05 13:16:48 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:33:37 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_createandcopy(s1, i, j));
 }
-
-// int	main(void)
-// {
-// 	char *c = "         Al112111111i              ";
-// 	char *a = " ";
-// 	printf("%s", ft_strtrim(c, a));
-
-// 	return (0);
-// }

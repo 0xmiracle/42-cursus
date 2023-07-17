@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:43 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/13 16:46:48 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:34:37 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,20 +100,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strings);
 }
-
-// int	main(void)
-// {
-// 	char *str = "^^^1^^2a,^^^^3^^^^--h^^^^";
-// 	char c = '^';
-// 	int i;
-// 	i = 0;
-// 	int j;
-// 	j = ft_nostrings(str, c);
-// 	char **strings;
-// 	strings = ft_split(str, c);
-// 	while (i < j)
-// 	{
-// 		printf("%s\n", strings[i]);
-// 		i++;
-// 	}
-// }

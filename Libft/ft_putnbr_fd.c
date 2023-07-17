@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:32 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:21:45 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:25 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (number % 10) + '0';
 	write(fd, &c, 1);
 }
-
-// int main()
-// {
-//     int i = -2147483648;
-//     ft_putnbr_fd(i, 1);
-// }

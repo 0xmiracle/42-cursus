@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:36:52 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/06 12:16:43 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:31:08 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-// int main()
-// {
-//     char c[] = "bonjour";
-//     int a = 'j';
-//     printf("%p\n",ft_memchr(c, a, 7));
-//     printf("%p",memchr(c, a, 7));
-// 	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
-
-// 	printf("%s\n", (char *)memchr(tab, -1, 7));
-// 	printf("%s\n", (char *)ft_memchr(tab, -1, 7));
-// }

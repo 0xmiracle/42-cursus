@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:36:44 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/04 12:27:22 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 13:47:57 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,3 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (fillstring((long)n, len, str));
 }
-
-// int	main(void)
-// {
-// 	unsigned int c;
-// 	c = -2147483648LL;
-// 	printf("%s\n", ft_itoa(c));
-// 	// printf("%d", ft_size(c));
-// }

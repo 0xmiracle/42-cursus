@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:43:54 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:21:02 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:10 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_isascii(int a)
 	else
 		return (0);
 }
-
-// int main ()
-// {
-//     printf("%d\n", ft_isascii('%'));
-//     printf("%d", isascii('%'));
-// }

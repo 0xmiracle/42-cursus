@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Ratwani <Ratwani@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:17 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/06/25 18:21:33 by Ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:31:39 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	*ft_memset(void *str, int c, size_t len)
 	}
 	return (str);
 }
-
-// int main()
-// {
-//     char str[10];
-
-//     ft_memset(str, 97, 3 * sizeof(char));
-//     printf("%s", str);
-// }

@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:36:04 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/04 15:32:59 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:29:27 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	char *result;
-// 	result = ft_calloc(2147483647, 2147483647);
-// 	printf("%s", result);
-// }

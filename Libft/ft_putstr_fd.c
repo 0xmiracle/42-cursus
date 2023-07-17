@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:37:38 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/07/06 10:32:15 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/07/16 11:32:29 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ void	ft_putstr_fd(char *s, int fd)
 	i = ft_strlen(s);
 	write(fd, s, i);
 }
-
-// int main()
-// {
-//     char *str;
-//     str = "HII";
-//     ft_putstr_fd(str, 1);
-// }
