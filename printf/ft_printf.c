@@ -6,14 +6,11 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:22:39 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/04 18:54:21 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/05 17:24:58 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-#include <unistd.h>
-#include<stdio.h>
 
 int	ft_check(char c, va_list *args)
 {
@@ -21,11 +18,11 @@ int	ft_check(char c, va_list *args)
 
 	i = 0;
 	if (c == 'c')
-		return(ft_putchar(va_arg(*args, int)));
+		return (ft_putchar(va_arg(*args, int)));
 	else if (c == 's')
 		return (ft_putstr(va_arg(*args, char *)));
-	// else if (c == 'p')
-	// 	return ;
+	else if (c == 'p')
+		return (to_hexconv_p(va_arg(*args, unsigned long)));
 	else if (c == 'd' || c == 'i')
 		return (ft_putnbr(va_arg(*args, int)));
 	else if (c == 'u')
@@ -33,9 +30,9 @@ int	ft_check(char c, va_list *args)
 	else if (c == 'x')
 		return (to_hexconv(va_arg(*args, unsigned int)));
 	else if (c == 'X')
-		return (to_hexconv(va_arg(*args, unsigned int)));
+		return (to_hexconv_u(va_arg(*args, unsigned int)));
 	else if (c == '%')
-		return(ft_putchar('%'));
+		return (ft_putchar('%'));
 	return (i);
 }
 
@@ -62,14 +59,3 @@ int	ft_printf(const char *c, ...)
 	va_end(args);
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	 int c = 10;
-// 	int y = printf("%d\n", c);
-// 	printf("%d\n", y);
-
-// 	int a = 10;
-// 	int x = ft_printf("%d\n", a);
-// 	ft_printf("%d\n", x);
-// }

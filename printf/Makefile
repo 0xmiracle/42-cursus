@@ -6,7 +6,7 @@
 #    By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/04 18:23:31 by ratwani           #+#    #+#              #
-#    Updated: 2023/08/04 18:35:35 by ratwani          ###   ########.fr        #
+#    Updated: 2023/08/05 16:26:23 by ratwani          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ CFLAGS= -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 SRCS = ft_printf.c \
-       ft_printf_utils_s.c
+       ft_printf_utils_s.c \
+	   ft_printf_utils_hexa.c
 
 OBJS = $(SRCS:.c=.o)
 
