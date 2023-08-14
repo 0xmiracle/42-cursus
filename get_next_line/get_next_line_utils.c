@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 17:37:12 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/08/14 19:44:46 by ratwani          ###   ########.fr       */
+/*   Created: 2023/08/14 17:46:37 by ratwani           #+#    #+#             */
+/*   Updated: 2023/08/14 17:47:29 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(const char *str, int a)
 {
-	size_t	i;
-	char	*p1;
-	char	*p2;
+	int		i;
+	char	c;
 
 	i = 0;
-	p1 = (char *)dst;
-	p2 = (char *)src;
-	if (p1 < p2)
+	c = (char)(a % 256);
+	while (str[i] != '\0')
 	{
-		while (i < len)
+		if (str[i] == c)
 		{
-			p1[i] = p2[i];
-			i++;
+			return ((char *)&str[i]);
 		}
+		i++;
 	}
-	else if (p1 > p2)
+	if (c == '\0')
 	{
-		i = len;
-		while (i > 0)
-		{
-			p1[i - 1] = p2[i - 1];
-			i--;
-		}
+		return ((char *)&str[i]);
 	}
-	return (dst);
+	return (0);
 }

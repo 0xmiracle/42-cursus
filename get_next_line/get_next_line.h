@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 17:37:12 by Ratwani           #+#    #+#             */
-/*   Updated: 2023/08/14 19:44:46 by ratwani          ###   ########.fr       */
+/*   Created: 2023/08/08 15:35:19 by ratwani           #+#    #+#             */
+/*   Updated: 2023/08/14 17:49:01 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE
+# define GET_NEXT_LINE
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
-{
-	size_t	i;
-	char	*p1;
-	char	*p2;
+# include <errno.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	i = 0;
-	p1 = (char *)dst;
-	p2 = (char *)src;
-	if (p1 < p2)
-	{
-		while (i < len)
-		{
-			p1[i] = p2[i];
-			i++;
-		}
-	}
-	else if (p1 > p2)
-	{
-		i = len;
-		while (i > 0)
-		{
-			p1[i - 1] = p2[i - 1];
-			i--;
-		}
-	}
-	return (dst);
-}
+char	*ft_strchr(const char *str, int a);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+#endif
