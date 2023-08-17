@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:35:19 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/14 17:49:01 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/15 17:16:53 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+char	*get_next_line(int fd);
 char	*ft_strchr(const char *str, int a);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_cpy(char *buff, char *str);
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *s1);
+
+
+
+
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 3
 # endif
 
 #endif
