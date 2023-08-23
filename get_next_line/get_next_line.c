@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:35:00 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/23 19:06:03 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/23 19:57:17 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_rmv(char *str)
 char	*get_next_line(int fd)
 {
 	int			i;
-	static char	*str = NULL;
+	static char	*str;
 	char		*buff;
 	int			j;
 	char		*tmp;
@@ -85,6 +85,7 @@ char	*get_next_line(int fd)
 		if (i == -1)
 		{
 			free(str);
+			str = NULL;
 			free(buff);
 			return (NULL);
 		}
@@ -104,12 +105,6 @@ char	*get_next_line(int fd)
 		str = ft_rmv(str);
 		return (tmp);
 	}
-	// if (i == -1)
-	// {
-	// 	free(str);
-	// 	str = NULL;
-	// 	return (free(buff), NULL);
-	// }
 	tmp = ft_fltr(str);
 	str = ft_rmv(str);
 	free(buff);
