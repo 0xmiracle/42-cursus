@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 17:46:37 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/15 17:20:49 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/23 18:31:05 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strchr(const char *str, int a)
 
 	i = 0;
 	c = (char)(a % 256);
+	if (str == NULL)
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		if (str[i] == c)

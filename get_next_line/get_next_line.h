@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:35:19 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/22 12:43:54 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/23 18:48:20 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *s1);
 
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 3
+#  define BUFFER_SIZE 10
 # endif
 
 #endif
