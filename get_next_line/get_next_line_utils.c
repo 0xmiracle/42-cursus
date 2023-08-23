@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 17:46:37 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/23 18:31:05 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/23 21:53:34 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,39 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
+char	*rr(char **str, int fd, char **buff, char **tmp)
+{
+	int	i;
+
+	i = 1;
+	while (i > 0 && !ft_strchr(*str, '\n'))
+	{
+		i = read(fd, *buff, BUFFER_SIZE);
+		if (i == -1)
+		{
+			free(*str);
+			*str = NULL;
+			return (free(*buff), NULL);
+		}
+		if (i == 0)
+		{
+			*tmp = ft_fun(*buff, str);
+			return (*tmp);
+		}
+		(*buff)[i] = '\0';
+		*str = ft_cpy(*buff, *str);
+	}
+	return ("");
+}
+
 char	*ft_strdup(const char *s1)
 {
 	int		i;
 	char	*str;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
 	while (s1[i])
 		i++;
 	str = (char *)malloc(sizeof(char) * (i + 1));

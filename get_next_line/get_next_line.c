@@ -6,7 +6,7 @@
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:35:00 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/23 19:57:17 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/23 21:53:48 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,51 +64,45 @@ char	*ft_rmv(char *str)
 	return (tmp);
 }
 
+char	*ft_fun(char *buff, char **str)
+{
+	char	*tmp;
+
+	tmp = NULL;
+	free(buff);
+	if (!*str)
+	{
+		free(*str);
+		*str = NULL;
+		return (NULL);
+	}
+	tmp = ft_fltr(*str);
+	*str = ft_rmv(*str);
+	return (tmp);
+}
+
 char	*get_next_line(int fd)
 {
 	int			i;
 	static char	*str;
 	char		*buff;
-	int			j;
 	char		*tmp;
+	char		*tt;
 
 	i = 1;
-	j = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
 		return (NULL);
-	while (i > 0 && !ft_strchr(str, '\n'))
-	{
-		i = read(fd, buff, BUFFER_SIZE);
-		if (i == -1)
-		{
-			free(str);
-			str = NULL;
-			free(buff);
-			return (NULL);
-		}
-		buff[i] = '\0';
-		str = ft_cpy(buff, str);
-	}
-	if (i == 0)
-	{
-		free(buff);
-		if (*str == '\0')
-		{
-			free(str);
-			str = NULL;
-			return (NULL);
-		}
-		tmp = ft_fltr(str);
-		str = ft_rmv(str);
+	tt = rr(&str, fd, &buff, &tmp);
+	if (!tt)
+		return (NULL);
+	else if (*tt != '\0')
 		return (tmp);
-	}
 	tmp = ft_fltr(str);
 	str = ft_rmv(str);
-	free(buff);
-	return (tmp);
+	return (free(buff), tmp);
 }
 
 // int	main(void)
