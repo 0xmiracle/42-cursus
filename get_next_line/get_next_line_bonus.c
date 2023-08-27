@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratwani <ratwani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 15:35:00 by ratwani           #+#    #+#             */
-/*   Updated: 2023/08/24 17:22:43 by ratwani          ###   ########.fr       */
+/*   Updated: 2023/08/24 17:25:31 by ratwani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_cpy(char *buff, char *str)
 {
@@ -84,7 +84,7 @@ char	*ft_fun(char *buff, char **str)
 char	*get_next_line(int fd)
 {
 	int			i;
-	static char	*str;
+	static char	*str[124];
 	char		*buff;
 	char		*tmp;
 	char		*tt;
@@ -95,12 +95,12 @@ char	*get_next_line(int fd)
 	buff = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!buff)
 		return (NULL);
-	tt = rr(&str, fd, &buff, &tmp);
+	tt = rr(&str[fd], fd, &buff, &tmp);
 	if (!tt)
 		return (NULL);
 	else if (*tt != '\0')
 		return (tmp);
-	tmp = ft_fltr(str);
-	str = ft_rmv(str);
+	tmp = ft_fltr(str[fd]);
+	str[fd] = ft_rmv(str[fd]);
 	return (free(buff), tmp);
 }
